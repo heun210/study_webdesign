@@ -20,5 +20,24 @@ $(function () {
     $(".slide ul").animate({ top: -100 * slideI + "%" });
   }, 2900);
 
-  //tab
+  tab;
+  $(".tabMenu li").click(function () {
+    $(".tabMenu>*, .tabItem>*").removeClass("on");
+    $(this).addClass("on").next("ul").addClass("on");
+  });
+  $("contents .tab ul.notice li")
+    .eq(0)
+    .click(function () {
+      $(".modal").fadeIn();
+    });
+
+  // $(".tabMenu li").click(function () {
+  //   let idx = $(this).index();
+
+  //   $(".tabItem>*").hide().removeClass("on");
+  //   $(".tabItem>*").eq(idx).show().addClass("on");
+
+  //   $(".tabMenu li").removeClass("on");
+  //   $(this).addClass("on");
+  // });
 });

@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   color: #333333;
 }
 
@@ -18,6 +18,7 @@ a {
 
 img {
   border: 0;
+  /* vertical-align: top; */
 }
 .clearfix ::after {
   content: "";
@@ -29,20 +30,47 @@ img {
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
+.popUpBox {
+  position: fixed;
+  width: 100%;
+  height : 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  display : none;
+}
+.popUp {
+  width : 700px;
+  height : 500px;
+  position: absolute;
+  left:50%;
+  top : 50%;
+  transform: translate(-50%,-50%);
+}
+.popUp button {
+  width : 40px;
+  height : 20px;
+}
+
+/* .popUpBox{
+  position: absolute;
+  width : 100%;
+  height : 100%;
+  z-index:999;
+} */
 /* header-------------*/
 header {
   width: 100%;
   height: 100px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   position: relative;
 }
 header .logo {
   width: 200px;
   height: 100px;
   display: block;
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   float: left;
   box-sizing: border-box;
   padding-top: 30px;
@@ -55,7 +83,7 @@ header nav {
   margin-right: 30px;
 }
 header ul a {
-  background-color: #fff;
+  border: 1px solid red;
 }
 header nav ul.gnb {
   width: 100%;
@@ -71,7 +99,7 @@ header nav ul.gnb > li > a {
   width: 100%;
   height: 40px;
   line-height: 40px;
-  /* background-color: cornsilk; */
+  background-color: white;
   display: block;
   font-size: 18px;
   font-weight: bold;
@@ -101,14 +129,14 @@ header nav ul.gnb > li > ul.sub > li > a {
   width: 100%;
   height: 100%;
   font-weight: bold;
-  /* background-color: cornsilk; */
+  /* background-color: #fff; */
 }
 
 /* slide---------------------- */
 .slide {
   width: 100%;
   height: 300px;
-  background-color: azure;
+  /* background-color: azure; */
   position: relative;
   overflow: hidden;
 }
@@ -123,8 +151,10 @@ header nav ul.gnb > li > ul.sub > li > a {
   height: 300px;
   text-align: center;
   font-size: 3em;
+  color: #fff;
 }
-.slide ul > li:nth-child(1) {
+
+/* .slide ul > li:nth-child(1) {
   background-color: burlywood;
 }
 .slide ul > li:nth-child(2) {
@@ -132,85 +162,180 @@ header nav ul.gnb > li > ul.sub > li > a {
 }
 .slide ul > li:nth-child(3) {
   background-color: khaki;
-}
+} */
 /* contents------------------ */
+
 .contents {
+  display: flex;
   width: 100%;
   height: 200px;
-  background-color: chartreuse;
-  display: flex;
+  background-color: blue;
 }
 .contents > * {
   width: 400px;
   height: 200px;
 }
-.tab {
-  border: 1px solid red;
-}
+
 .tabMenu li {
   display: inline-block;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
-.tabMenu li > a {
+.tabMenu li a {
   display: block;
   padding: 10px;
 }
-.tabMenu li.on > a {
-  background: rgb(255, 245, 245);
-}
-.tabMenu li:hover,
-.notice li:hover {
+.tabMenu li.on a {
+  background-color: #fff;
   text-decoration: underline;
 }
+
+.tabItem > * {
+  height: 155px;
+  /* padding: 5px 10px 10px 20px; */
+}
+.tabItem > *.on {
+  /* background: rgb(255, 245, 245); */
+}
+
 .notice li {
   display: flex;
-  line-height: 2em;
+  line-height: 2.5em;
+  margin-left : 20px;
+  /* background-color: antiquewhite; */
 }
-.notice li > a {
+.notice li a {
   display: inline-block;
   width: 260px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border: 1px solid red;
-  margin-left: 20px;
 }
-.notice li > span {
-  margin-left: 10px;
-  border: 1px solid red;
+.notice li span {
+  margin-left: 5px;
+  /* background-color: azure; */
+}
+.notice li:hover {
+  text-decoration: underline;
 }
 
 .gallery {
   display: none;
-  position: relative;
 }
 .gallery li {
   display: inline-block;
-  width: 25%;
+  width: 30%;
   margin-top: 8px;
-  margin-left: 20px;
+  margin-left: 8px;
+  background-color: antiquewhite;
+  /* justify-content: space-around; */
 
-  /* display: block; */
-  border: 1px solid red;
 }
-.gallery li > a > img {
+.gallery a img {
   width: 100%;
+  height : 100%;
+  
 }
-
 .banner,
 .link {
   position: relative;
-  border: 1px solid red;
+  float: left;
+  width: 400px;
+  height: 200px;
+  
 }
-.banner img,
-.link img {
+.banner h2,
+.link h2 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate((-50%, -50%));
-  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 600;
+  background: #fff;
+  padding: 10px;
 }
+.banner img,
+.link img {
+  width : 100%;
+  height : 100%;
+
+/* .contents {
+  width: 100%;
+  height: 200px;
+  background-color: blueviolet;
+}
+.contents h2 {
+  background-color: #fff;
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.contents .tab {
+  width: 400px;
+  height: 200px;
+  background-color: blanchedalmond;
+  float: left;
+  position: relative;
+ 
+}
+.contents .tab ul {
+  width: 100%;
+  height: 170px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  display: none;
+}
+.contents .tab ul.on {
+  display: block;
+}
+.contents .tab h2.on {
+ 
+  text-decoration: underline;
+}
+.banner {
+  width: 400px;
+  height: 200px;
+  
+  float: left;
+  position: relative;
+}
+.link {
+  width: 400px;
+  height: 200px;
+  
+  float: left;
+  position: relative;
+}
+.banner img,
+.link img {
+  
+  width: 100%;
+  height: 200px;
+  border: 1px solid red;
+  overflow: hidden;
+}
+.banner h2,
+.link h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 600;
+  background: #fff;
+  padding: 10px;
+} */
+
 footer {
   width: 100%;
   height: 100px;

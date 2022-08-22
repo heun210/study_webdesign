@@ -34,7 +34,7 @@ $(function () {
       if(slideI<2){
         slideI++;
       }else{
-        slide()=0;
+        slideI=0;
       }
       $('.slide ul').animate({left:-100*slideI + "%"},500)
     },2900); */

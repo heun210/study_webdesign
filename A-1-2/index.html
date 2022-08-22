@@ -9,6 +9,14 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
   <body>
+    <div class="popup">
+      <div>title</div>
+      <div>
+        <p>aaaaaa</p>
+        <p>bbbbbb</p>
+      </div>
+      <div class="closeBtn"><a href="#">X</a></div>
+    </div>
     <div class="wrap">
       <header>
         <div class="logo">
@@ -72,38 +80,40 @@
         <div class="board">
           <div class="tab">
             <ul class="btn">
-              <li class="btn1 on"><a href="#">notice</a></li>
-              <li class="btn2"><a href="#">gallery</a></li>
+              <li class="btn1"><a href="#btn1">notice</a></li>
+              <li class="btn2"><a href="#btn2">gallery</a></li>
             </ul>
           </div>
 
           <div class="frame">
             <ul class="notice">
               <li>
-                <a href="#"
-                  >aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbb
-                  <span>2022.08.18</span></a
-                >
+                <a href="#" class="popupOpen"
+                  >abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</a
+                ><span>2022.08.22</span>
               </li>
               <li>
-                <a href="#">bbbbbbbbbbb<span>2022.08.18</span></a>
+                <a href="#">abcdefghijklmnopqrstuvwxyz</a
+                ><span>2022.08.22</span>
               </li>
               <li>
-                <a href="#">ccccccccccc<span>2022.08.18</span></a>
+                <a href="#">abcdefghijklmnopqrstuvwxyz</a
+                ><span>2022.08.22</span>
               </li>
               <li>
-                <a href="#">ddddddddddd<span>2022.08.18</span></a>
+                <a href="#">abcdefghijklmnopqrstuvwxyz</a
+                ><span>2022.08.22</span>
               </li>
             </ul>
             <ul class="gallery">
               <li>
-                <a href="#"><img src="#" alt="1" /></a>
+                <a href="#"><img src="images/gallery01.png" alt="1" /></a>
               </li>
               <li>
-                <a href="#"><img src="#" alt="2" /></a>
+                <a href="#"><img src="images/gallery02.png" alt="2" /></a>
               </li>
               <li>
-                <a href="#"><img src="#" alt="3" /></a>
+                <a href="#"><img src="images/gallery03.png" alt="3" /></a>
               </li>
             </ul>
           </div>
@@ -115,7 +125,31 @@
           <a href="#"><img src="#" alt="" /></a>
         </div>
       </div>
-      <footer></footer>
+      <footer>
+        <div class="footerLogo">
+          <a href="#"><img src="#" alt="footerlogo" /></a>
+        </div>
+        <div class="footerNav">
+          <!-- <p>개인정보처리방침</p>
+          <p>저작권정책</p>
+          <p>RSS</p> -->
+          <ul>
+            <li>
+              <a href="#">| 개인정보처리방침 |</a>
+            </li>
+            <li><a href="#">| 저작권정책 |</a></li>
+            <li><a href="#">| RSS |</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>Copyright &copy; JUST 쇼핑몰. All rights reserved</p>
+        </div>
+        <div class="sns">
+          <a href="#"><img src="#" alt="a" />a</a>
+          <a href="#"><img src="#" alt="b" />b</a>
+          <a href="#"><img src="#" alt="c" />c</a>
+        </div>
+      </footer>
     </div>
     <script src="js/main.js"></script>
   </body>

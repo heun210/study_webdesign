@@ -76,4 +76,16 @@ $(function () {
     $(".frame>ul").fadeOut(0);
     $(".frame>ul").eq(i).fadeIn();
   });
+
+  //popup
+  /* $(".popup").show();
+  $(".closeBtn").click(function () {
+    $(".popup").hide();
+  }); */
+  $(".popupOpen").click(function () {
+    $(".popup").fadeIn(0);
+  });
+  $(".closeBtn").click(function () {
+    $(".popup").fadeOut(0);
+  });
 });

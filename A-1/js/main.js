@@ -7,8 +7,8 @@ $(function () {
     function () {
       $("ul.sub").stop().slideUp();
     }
-  );
-  nav-bg
+  );*/
+  // nav-bg
   $("ul.gnb>li, .navBg").hover(
     function () {
       $("ul.sub, .navBg").stop().slideDown();
@@ -16,17 +16,17 @@ $(function () {
     function () {
       $("ul.sub, .navBg").stop().slideUp();
     }
-  ); */
+  );
 
   //nav-this
-  $("ul.gnb>li").hover(
+  /* $("ul.gnb>li").hover(
     function () {
       $(this).find("ul.sub").stop().slideDown();
     },
     function () {
       $(this).find("ul.sub").stop().slideUp();
     }
-  );
+  ); */
 
   // slide-left,right
   /* var slideI = 0;

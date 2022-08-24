@@ -277,6 +277,7 @@ footer {
   height: 50px;
   float: left;
   background-color: tan;
+  text-align: center;
 }
 .copyright {
   width: 1000px;

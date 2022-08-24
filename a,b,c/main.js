@@ -63,8 +63,8 @@ $(function () {
     } else {
       slideI = 0;
     }
-    $(".slide ul").eq(slideI).siblings().fadeOut();
-    $("slide ul").eq(slideI).fadeIn();
+    $(".slide ul li").eq(slideI).siblings().fadeOut();
+    $("slide ul li").eq(slideI).fadeIn();
   });
 });
 
